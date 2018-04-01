@@ -11,6 +11,8 @@ import { EndworkoutComponent } from './endworkout/endworkout.component';
 import { HomeComponent } from './home/home.component';
 import { StartworkoutComponent } from './startworkout/startworkout.component';
 import { TrackworkoutComponent } from './trackworkout/trackworkout.component';
+import { AddcategoryComponent } from './addcategory/addcategory.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
@@ -22,10 +24,11 @@ import { TrackworkoutComponent } from './trackworkout/trackworkout.component';
     EditworkoutComponent,
     EndworkoutComponent,
     HomeComponent,    
-    StartworkoutComponent, TrackworkoutComponent
+    StartworkoutComponent, TrackworkoutComponent, AddcategoryComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

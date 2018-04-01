@@ -1,3 +1,22 @@
-<p>
-  home works!
-</p>
+<div>
+  <label for="project" class="col-sm-1 control-label">Workout:</label>
+  <div class="input-group col-sm-6">
+    <input type="text" id="project" class="search-query form-control" ng-model="task.project" />
+  </div>
+</div>
+
+<ul class="list-group" id="workoutList">
+  <li class="list-group-item">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-2">{{workout.name}}</div>
+      </div>
+      <div class="col">
+        <button class="btn btn-primary" type="button">Edit</button>
+        <button class="btn btn-primary" type="button">Delete</button>
+        <button class="btn btn-primary" type="button">Start</button>
+        <button class="btn btn-primary" type="button">End</button>
+      </div>
+    </div>
+  </li>
+</ul>

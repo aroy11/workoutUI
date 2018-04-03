@@ -13,6 +13,9 @@ import { StartworkoutComponent } from './startworkout/startworkout.component';
 import { TrackworkoutComponent } from './trackworkout/trackworkout.component';
 import { AddcategoryComponent } from './addcategory/addcategory.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ApiService } from './shared/services/api.service';
+import { WorkoutService } from './shared/services/workout.service';
 
 
 @NgModule({
@@ -28,9 +31,10 @@ import { AppRoutingModule } from './/app-routing.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule    
   ],
-  providers: [],
+  providers: [HttpClientModule, BrowserModule, AppRoutingModule, ApiService, WorkoutService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

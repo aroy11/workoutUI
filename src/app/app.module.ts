@@ -26,15 +26,19 @@ import { WorkoutService } from './shared/services/workout.service';
     AddworkoutComponent,
     EditworkoutComponent,
     EndworkoutComponent,
-    HomeComponent,    
+    HomeComponent,
     StartworkoutComponent, TrackworkoutComponent, AddcategoryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule    
+    HttpClientModule
   ],
-  providers: [HttpClientModule, BrowserModule, AppRoutingModule, ApiService, WorkoutService],
+  providers: [HttpClientModule,
+              BrowserModule,
+              AppRoutingModule,
+              ApiService,
+              WorkoutService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

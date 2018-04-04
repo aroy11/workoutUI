@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/` in a browser. The app will be loaded in the browser.
 
-Run `git push` to push the staged changes to repository. Jenkins will poll GIT SCM every 5 minutes to pull out the latest changes(if any), trigger a build and host the latest changes using 'Web Deploy' in IIS. Navigate to `http://localhost:7777/` in a browser to load the deployed application.
+Run `git push` to push the staged changes to remote repository. Jenkins will poll GIT SCM every 5 minutes to pull out the latest changes(if any), trigger a build and host the latest changes using 'Web Deploy' in IIS. Navigate to `http://localhost:7777/` in a browser to load the deployed application.
 
 ## Code scaffolding
 

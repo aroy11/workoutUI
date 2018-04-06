@@ -27,6 +27,6 @@
     <button type="button" class="btn btn-primary" (click)='editCategory(category, editClicked)' title="Edit">{{editClicked && category.Category_Id == selectedCategory.Category_Id ? 'Save' : 'Edit'}}</button>
   </div>
   <div class="col-2">
-    <button type="button" class="btn btn-primary" title="Delete">Delete</button>
+    <button type="button" class="btn btn-primary" (click)='deleteCategory(category)' title="Delete">Delete</button>
   </div>
 </div>

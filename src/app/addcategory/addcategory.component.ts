@@ -52,14 +52,28 @@ export class AddcategoryComponent implements OnInit {
 
       this.categoryService.updateCategory(this.selectedCategory)
         .subscribe(x => {
-          
+
         });
-        this.saveClicked = false;
-        this.editClicked = false;
-        catgry.Category_Name = this.selectedCategory.Category_Name;
+      this.saveClicked = false;
+      this.editClicked = false;
+      catgry.Category_Name = this.selectedCategory.Category_Name;
     }
     this.selectedCategory.Category_Id = catgry.Category_Id;
     this.selectedCategory.Category_Name = catgry.Category_Name;
 
+  }
+
+  removeCategoryFromCollection(category: Category, id: number) {
+    const index: number = this.categories.map(function (e) { return e.Category_Id; }).indexOf(id);
+    if (index !== -1) {
+      this.categories.splice(index, 1);
+    }
+  }
+
+  deleteCategory(category: Category) {
+    this.categoryService.deleteCategory(category.Category_Id)
+      .subscribe(x => {
+      });
+    this.removeCategoryFromCollection(category, category.Category_Id);
   }
 }

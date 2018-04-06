@@ -9,16 +9,20 @@ import { Category } from '../models/category';
 
 @Injectable()
 export class CategoryService {
-  constructor (
+  constructor(
     private apiService: ApiService
-  ) {}
+  ) { }
 
   getAll(): Observable<Category[]> {
     return this.apiService.get(`/Categories`)
       .pipe(map(response => <Category[]>response));
   }
 
-  updateCategory(category: Category){
-    return this.apiService.put(`/Categories`,category);
+  updateCategory(category: Category) {
+    return this.apiService.put(`/Categories`, category);
+  }
+
+  deleteCategory(id: Number) {
+    return this.apiService.delete(`/Categories/` + id);
   }
 }

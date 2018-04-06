@@ -18,6 +18,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ApiService } from './shared/services/api.service';
 import { WorkoutService } from './shared/services/workout.service';
 import { CategoryService } from './shared/services/category.service';
+import { FilterPipe } from './shared/filter.pipe';
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import { CategoryService } from './shared/services/category.service';
     EditworkoutComponent,
     EndworkoutComponent,
     HomeComponent,
-    StartworkoutComponent, TrackworkoutComponent, AddcategoryComponent
+    StartworkoutComponent, TrackworkoutComponent, AddcategoryComponent, FilterPipe
   ],
   imports: [
     BrowserModule,

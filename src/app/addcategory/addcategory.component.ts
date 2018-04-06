@@ -42,20 +42,21 @@ export class AddcategoryComponent implements OnInit {
   editCategory(catgry: Category, editClckd: boolean) {
     if (this.editClicked == false) {
       this.saveClicked = false;
+      this.editClicked = true;
     }
     else {
       this.saveClicked = true;
-      this.editClicked = false;
     }
-    this.editClicked = true;
 
-    if(this.saveClicked == true){
-      this.categoryService.updateCategory(catgry)
-      .subscribe(x => {
-        this.categories = x;
-      });
-      //this.getCategory();
-      this.saveClicked = false;
+    if (this.saveClicked == true) {
+
+      this.categoryService.updateCategory(this.selectedCategory)
+        .subscribe(x => {
+          
+        });
+        this.saveClicked = false;
+        this.editClicked = false;
+        catgry.Category_Name = this.selectedCategory.Category_Name;
     }
     this.selectedCategory.Category_Id = catgry.Category_Id;
     this.selectedCategory.Category_Name = catgry.Category_Name;

@@ -1,3 +1,32 @@
-<p>
-  addcategory works!
-</p>
+<div class="row">
+  <div class="col-12">
+    <h4>Add Category</h4>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <input type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+<form class="form-horizontal">
+  <div class="row">
+    <div class="col-10">
+      <input type="text" class="form-control" id="categories" name="categoryName">
+    </div>
+    <div class="col-2">
+      <button type="submit" class="btn btn-primary pull-right" title="Add category">+</button>
+    </div>
+  </div>
+</form>
+<div class="row" *ngFor="let category of categories; let i = index;" [attr.data-index]="i">
+  <div class="col-8">
+    <label *ngIf="!(editClicked && category.Category_Id == selectedCategory.Category_Id)"> {{category.Category_Name}} </label>
+    <input *ngIf="editClicked && category.Category_Id == selectedCategory.Category_Id" [(ngModel)]="selectedCategory.Category_Name" type="text" id="catName" name="catName">
+  </div>
+  <div class="col-2">
+    <button type="button" class="btn btn-primary" (click)='editCategory(category, editClicked)' title="Edit">{{editClicked && category.Category_Id == selectedCategory.Category_Id ? 'Save' : 'Edit'}}</button>
+  </div>
+  <div class="col-2">
+    <button type="button" class="btn btn-primary" title="Delete">Delete</button>
+  </div>
+</div>

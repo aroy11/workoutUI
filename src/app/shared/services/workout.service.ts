@@ -13,7 +13,7 @@ export class WorkoutService {
   ) {}
 
   getAll(): Observable<Workout[]> {
-    return this.apiService.get(`/workouts`)
-      .pipe(map(data => data.comments));
+    return this.apiService.get(`/GetWorkouts`)
+      .pipe(map(response => <Workout[]>response));
   }
 }

@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -16,6 +17,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ApiService } from './shared/services/api.service';
 import { WorkoutService } from './shared/services/workout.service';
+import { CategoryService } from './shared/services/category.service';
 
 
 @NgModule({
@@ -31,6 +33,8 @@ import { WorkoutService } from './shared/services/workout.service';
   ],
   imports: [
     BrowserModule,
+    FormsModule, 
+    ReactiveFormsModule,   
     AppRoutingModule,
     HttpClientModule
   ],
@@ -38,7 +42,7 @@ import { WorkoutService } from './shared/services/workout.service';
               BrowserModule,
               AppRoutingModule,
               ApiService,
-              WorkoutService],
+             CategoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -3,16 +3,16 @@
 
 # Stack
 
-Angular CLI: 1.7.3
-Node: 8.11.1
-Angular: 5.2.9
-typescript: 2.5.3
-webpack: 3.11.0
-bootstrap: 4.0.0
-karma: 2.0.0
-Jasmine: 2.8.0
-Jenkins: 2.114
-IIS: 10.0.16299.15
+Angular CLI: 1.7.3  
+Node: 8.11.1  
+Angular: 5.2.9  
+typescript: 2.5.3  
+webpack: 3.11.0  
+bootstrap: 4.0.0  
+karma: 2.0.0  
+Jasmine: 2.8.0  
+Jenkins: 2.114  
+IIS: 10.0.16299.15  
 
 ## Development server
 
@@ -36,5 +36,5 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma]
+Run `ng test` to execute the unit tests via [Karma].  
 Karma tests added: 11/11 specs

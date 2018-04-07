@@ -13,6 +13,8 @@ import { EndworkoutComponent } from './endworkout/endworkout.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { APP_BASE_HREF } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CategoryfilterPipe } from './addcategory/categoryfilter.pipe';
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -24,12 +26,17 @@ describe('AppComponent', () => {
         EditworkoutComponent,
         EndworkoutComponent,
         HomeComponent,
-        StartworkoutComponent, TrackworkoutComponent, AddcategoryComponent
+        StartworkoutComponent, 
+        TrackworkoutComponent, 
+        AddcategoryComponent,
+        CategoryfilterPipe
       ],
       imports: [
         BrowserModule,
         AppRoutingModule,
-        HttpClientModule
+        HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule
       ],
       providers: [{provide: APP_BASE_HREF, useValue : '/' }]
     }).compileComponents();

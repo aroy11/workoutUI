@@ -3,6 +3,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { AddcategoryComponent } from './addcategory.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from '../shared/services/api.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CategoryfilterPipe } from './categoryfilter.pipe';
 
 describe('AddcategoryComponent', () => {
   let component: AddcategoryComponent;
@@ -11,9 +13,11 @@ describe('AddcategoryComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        HttpClientModule
+        HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule
     ],
-      declarations: [ AddcategoryComponent ],
+      declarations: [ AddcategoryComponent, CategoryfilterPipe ],
       providers:[ApiService]
     })
     .compileComponents();

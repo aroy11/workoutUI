@@ -18,7 +18,7 @@
     </div>
   </div>
 </form>
-<div class="row" *ngFor="let category of categories | filter : searchText" [attr.data-index]="i">
+<div class="row" *ngFor="let category of categories | categoryFilter : searchText" [attr.data-index]="i">
   <div class="col-8">
     <label *ngIf="!(editClicked && category.Category_Id == selectedCategory.Category_Id)"> {{category.Category_Name}} </label>
     <input *ngIf="editClicked && category.Category_Id == selectedCategory.Category_Id" [(ngModel)]="selectedCategory.Category_Name" type="text" id="catName" name="catName">

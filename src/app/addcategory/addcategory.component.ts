@@ -26,12 +26,14 @@ export class AddcategoryComponent implements OnInit {
     this.category = new Category(0, "")
     this.editClicked = false;
     this.saveClicked = false;
+    this.newCategoryName = "";
+    this.searchText = "";
   }
 
   categories: Array<Category> = [];
   selectedCategory: Category = new Category(0, "");
-
-
+  newCategoryName = "";
+  searchText = "";
 
   getCategory() {
     this.categoryService.getAll()
@@ -39,6 +41,16 @@ export class AddcategoryComponent implements OnInit {
         this.categories = x;
       });
   }
+
+  addCategory(categoryName: string) {
+    var cat = new Category(0, categoryName);
+    this.categoryService.addCategory(cat)
+      .subscribe(x => {
+        this.categories.push(cat);
+        this.newCategoryName = "";
+      });
+  }
+
   editCategory(catgry: Category, editClckd: boolean) {
     if (this.editClicked == false) {
       this.saveClicked = false;

@@ -9,7 +9,7 @@ import { catchError } from 'rxjs/operators/catchError';
 export class ApiService {
   constructor(
     private http: HttpClient
-  ) {}
+  ) { }
 
   private formatErrors(error: any) {
     return new ErrorObservable(error.error);
@@ -30,8 +30,7 @@ export class ApiService {
 
   post(path: string, body: Object = {}): Observable<any> {
     return this.http.post(
-      `${environment.apiUrl}${path}`,
-      JSON.stringify(body)
+      `${environment.apiUrl}${path}`, body
     ).pipe(catchError(this.formatErrors));
   }
 

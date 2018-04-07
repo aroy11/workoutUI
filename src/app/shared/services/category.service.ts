@@ -25,4 +25,9 @@ export class CategoryService {
   deleteCategory(id: Number) {
     return this.apiService.delete(`/Categories/` + id);
   }
+
+  addCategory(category: Category) {
+    return this.apiService.post(`/Categories`, category)
+      .pipe(map(response => <Category>response));
+  }
 }

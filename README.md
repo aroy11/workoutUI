@@ -30,11 +30,14 @@ Job url: `http://localhost:8080/job/WorkoutTrackerUI/`
 ## Production server
 Navigate to `http://localhost:7777/` in a browser to load the deployed application in IIS.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma].  
-Karma tests added: 11/11 specs
+Karma tests added: 12/12 specs
+
+## Git
+
+Version control management software used is GIT with a master branch and a feature development branch. When a feature is complete, the feature branch is merged back to the master.
+
+Master branch GIT URL: http://172.18.2.18/abrahamrohithroy/workout-ui-fsd/tree/master  
+Feature branch GIT URL: http://172.18.2.18/abrahamrohithroy/workout-ui-fsd/tree/feature_branch_1

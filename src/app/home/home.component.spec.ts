@@ -3,6 +3,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { HomeComponent } from './home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from '../shared/services/api.service';
+import { WorkoutfilterPipe } from './workoutfilter.pipe';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -11,9 +13,11 @@ describe('HomeComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        HttpClientModule
+        HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule
     ],
-      declarations: [ HomeComponent ],
+      declarations: [ HomeComponent, WorkoutfilterPipe ],
       providers:[ApiService]
     })
     .compileComponents();

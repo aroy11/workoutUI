@@ -1,10 +1,10 @@
 export class Workout {
 
     constructor(
-    public workoutTitle: string,
-    public workoutNote: string,
-    public caloriesBurntPerMinute: number,
-    public categoryId: number,
-    public workoutId: number = 0,
+    public Workout_Title: string,
+    public Workout_Note: string,
+    public CaloriesBurntPerMinute: number,
+    public Category_Id: number,
+    public Workout_Id: number = 0,
     ) {}
 }

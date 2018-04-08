@@ -19,6 +19,7 @@ import { ApiService } from './shared/services/api.service';
 import { WorkoutService } from './shared/services/workout.service';
 import { CategoryService } from './shared/services/category.service';
 import { CategoryfilterPipe } from './addcategory/categoryfilter.pipe';
+import { WorkoutfilterPipe } from './home/workoutfilter.pipe';
 
 
 @NgModule({
@@ -33,7 +34,7 @@ import { CategoryfilterPipe } from './addcategory/categoryfilter.pipe';
     StartworkoutComponent, 
     TrackworkoutComponent, 
     AddcategoryComponent, 
-    CategoryfilterPipe
+    CategoryfilterPipe, WorkoutfilterPipe
   ],
   imports: [
     BrowserModule,

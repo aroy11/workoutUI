@@ -33,7 +33,7 @@ Navigate to `http://localhost:7777/` in a browser to load the deployed applicati
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma].  
-Karma tests added: 12/12 specs
+Karma tests added: 13/13 specs
 
 ## Git
 

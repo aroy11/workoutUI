@@ -16,4 +16,12 @@ export class WorkoutService {
     return this.apiService.get(`/GetWorkouts`)
       .pipe(map(response => <Workout[]>response));
   }
+
+  deleteWorkout(id: Number) {
+    return this.apiService.delete(`/DeleteWorkout/` + id);
+  }
+
+  updateWorkout(workout: Workout) {
+    return this.apiService.put(`/EditWorkout`, workout);
+  }
 }

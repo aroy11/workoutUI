@@ -1,19 +1,21 @@
 <div>
   <label for="project" class="col-sm-1 control-label">Workout:</label>
   <div class="input-group col-sm-6">
-    <input type="text" id="project" class="search-query form-control" ng-model="task.project" />
+    <input type="text" id="project" class="search-query form-control" [(ngModel)]="searchText" />
   </div>
 </div>
 
-<ul class="list-group" id="workoutList">
+<ul class="list-group" id="workoutList" *ngFor="let workout of workouts | workoutFilter : searchText">
   <li class="list-group-item">
     <div class="container">
       <div class="row">
-        <div class="col-sm-2">WorkoutName</div>
+        <div *ngIf="!(editClicked && workout.Workout_Id == selectedWorkout.Workout_Id)" class="col-sm-2">{{workout.Workout_Title}}</div>
+        <input *ngIf="editClicked && workout.Workout_Id == selectedWorkout.Workout_Id" [(ngModel)]="selectedWorkout.Workout_Title"
+          type="text" id="wrktName" name="wrktName">
       </div>
       <div class="col">
-        <button class="btn btn-primary" type="button">Edit</button>
-        <button class="btn btn-primary" type="button">Delete</button>
+        <button class="btn btn-primary" type="button" (click)='editWorkout(workout, editClicked)'>{{editClicked && workout.Workout_Id == selectedWorkout.Workout_Id ? 'Save' : 'Edit'}}</button>
+        <button class="btn btn-primary" type="button" (click)='deleteWorkout(workout)'>Delete</button>
         <button class="btn btn-primary" type="button">Start</button>
         <button class="btn btn-primary" type="button">End</button>
       </div>

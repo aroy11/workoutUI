@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { APP_BASE_HREF } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CategoryfilterPipe } from './addcategory/categoryfilter.pipe';
+import { WorkoutfilterPipe } from './home/workoutfilter.pipe';
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -29,7 +30,8 @@ describe('AppComponent', () => {
         StartworkoutComponent, 
         TrackworkoutComponent, 
         AddcategoryComponent,
-        CategoryfilterPipe
+        CategoryfilterPipe,
+        WorkoutfilterPipe
       ],
       imports: [
         BrowserModule,
